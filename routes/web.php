@@ -5,8 +5,12 @@ use App\Http\Controllers\UploadDataController;
 use App\Livewire\CetakPDF;
 use Illuminate\Support\Facades\Route;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->to('/admin/login');
 });
 
 Route::post('/Upload-Data', [UploadDataController::class, 'store'])->name('upload.data');
